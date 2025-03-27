@@ -1,0 +1,11 @@
+PyMuPDF
+spacy
+transformers
+faiss-cpu
+flask
+flask-cors
+pdfplumber
+numpy
+google-generativeai
+gunicorn
+python-dotenv
