@@ -2,6 +2,8 @@ import os
 import google.generativeai as genai
 from google.generativeai import types
 
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+
 project = os.getenv("GOOGLE_CLOUD_PROJECT", "potent-trail-454820-h5")
 location = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
 
@@ -52,7 +54,7 @@ def query_flash(question = "What is APR?", context_chunks = [], model_name="gemi
     except genai.types.generation_types.BlockedPromptException as e:
         return f"Blocked Prompt Error: {e}"
     except Exception as e:
-        return {"answer": f"An unexpected error occurred: {e}", "relevant_context": []}
+        return {"answer": f"An error occurred: {str(e)}", "relevant_context": []}
 
 
 if __name__ == "__main__":
