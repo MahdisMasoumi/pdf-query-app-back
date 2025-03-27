@@ -10,3 +10,4 @@ numpy
 google-generativeai
 gunicorn
 python-dotenv
+thinc
