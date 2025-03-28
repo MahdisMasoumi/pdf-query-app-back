@@ -1,2 +1,40 @@
-/venv
-/__pycache__
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Dependency directories
+lib/
+libs/
+include/
+bin/
+
+# Package installation files
+*.egg-info/
+dist/
+build/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Personal/local config
+.env
+local_settings.py
+
+# Mac system files
+.DS_Store
