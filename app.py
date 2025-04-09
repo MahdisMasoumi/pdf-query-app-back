@@ -44,11 +44,12 @@ def process_pdf_query(pdf_file, query_text, relevance_threshold=np.float32(0.6))
         embeddings = generate_embeddings(chunks)
 
         # Store and load FAISS index
-        index = store_in_faiss(embeddings, db_file="vector_db_cosine.index")
-        index = load_faiss_index("vector_db_cosine.index")
+        # index = store_in_faiss(embeddings, db_file="vector_db_cosine.index")
+        # index = load_faiss_index("vector_db_cosine.index")
+        index = store_in_faiss(embeddings)
 
         # Query FAISS index
-        results = query_faiss_index(query_text, index, chunks, top_k=5)
+        results = query_faiss_index(query_text, index, chunks, top_k=2)
         
         # Adjust relevance threshold
         while len(results) > 0 and all(score <= relevance_threshold for _, score, _ in results):
