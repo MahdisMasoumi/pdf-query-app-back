@@ -16,7 +16,7 @@ app = Flask(__name__)
 CORS(app, resources={
     r"/api/query": {
         "origins": [
-            "https://your-vercel-app.vercel.app",  # Replace with your Vercel URL
+            "https://pdf-query-app.vercel.app/",  # Replace with your Vercel URL
             "http://localhost:3000"  # Local development
         ]
     }
