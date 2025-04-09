@@ -1,9 +1,10 @@
 import os
 import google.generativeai as genai
 from google.generativeai import types
+from dotenv import load_dotenv
 
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
-
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 project = os.getenv("GOOGLE_CLOUD_PROJECT", "potent-trail-454820-h5")
 location = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
 
