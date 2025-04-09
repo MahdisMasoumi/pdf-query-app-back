@@ -19,3 +19,4 @@ cymem==2.0.7
 blis==0.7.9
 srsly==2.4.6
 preshed==3.0.8
+gunicorn
