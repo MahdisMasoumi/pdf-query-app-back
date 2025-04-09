@@ -13,14 +13,8 @@ from text_chunker import smart_chunk_spacy_advanced
 from vector_db_utils import generate_embeddings, store_in_faiss, load_faiss_index, query_faiss_index
 
 app = Flask(__name__)
-CORS(app, resources={
-    r"/api/query": {
-        "origins": [
-            "https://pdf-query-app.vercel.app/",  # Replace with your Vercel URL
-            "http://localhost:3000"  # Local development
-        ]
-    }
-})
+CORS(app, origins=["https://pdf-query-app.vercel.app", "http://localhost:3000"], supports_credentials=True)
+
 
 def process_pdf_query(pdf_file, query_text, relevance_threshold=np.float32(0.6)):
     """
