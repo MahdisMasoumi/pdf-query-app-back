@@ -4,7 +4,7 @@ pdfplumber==0.10.2
 PyMuPDF==1.22.3
 spacy==3.5.4
 transformers==4.33.2
-git+https://github.com/UKPLab/sentence-transformers.git@v2.2.2
+git+https://github.com/UKPLab/sentence-transformers.git@43e437f3b189ae697f204f9c66e36e9d823af18f
 faiss-cpu==1.7.4
 scikit-learn==1.3.2
 numpy==1.24.4
